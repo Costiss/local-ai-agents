@@ -1,12 +1,15 @@
-import litellm
+import logging
+from dotenv import load_dotenv
+from fastapi import FastAPI
+from google.adk.cli.fast_api import get_fast_api_app
 
-def main():
-    response = litellm.completion(
-        model="ollama/llama3",
-        messages=[{"role": "user", "content": "Hello from db-ia!"}],
-        api_base="http://localhost:11434"
-    )
-    print(response['choices'][0]['message']['content'])
 
-if __name__ == "__main__":
-    main()
+_ = load_dotenv()
+logging.basicConfig(level=logging.INFO)
+
+app: FastAPI = get_fast_api_app(
+    agents_dir="./app/agents",
+    session_service_uri="sqlite:///default.db",
+    allow_origins=["*"],
+    web=True,
+)
