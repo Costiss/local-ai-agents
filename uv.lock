@@ -295,35 +295,6 @@ wheels = [
 ]
 
 [[package]]
-name = "db-ia"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "fastapi", extra = ["standard"] },
-    { name = "google-adk" },
-    { name = "litellm" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "basedpyright" },
-    { name = "ruff" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "fastapi", extras = ["standard"], specifier = ">=0.116.1" },
-    { name = "google-adk", specifier = ">=1.13.0" },
-    { name = "litellm", specifier = ">=1.77.0" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "basedpyright", specifier = ">=1.31.4" },
-    { name = "ruff", specifier = ">=0.12.12" },
-]
-
-[[package]]
 name = "distro"
 version = "1.9.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1214,6 +1185,35 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/4e/25/72a400aa06e8cb3f18a6dd15ac634caa6f6fb2acf3c03dd208c41495fd79/litellm-1.77.0.tar.gz", hash = "sha256:7025a99c88e54209a64c05824ec1fab968343be1ed4be3573afacc92160d561c", size = 10211874, upload-time = "2025-09-09T14:50:21.796Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/46/fa/f4f9cd0d04ef9d80dfb5c171ed80e40edc7bca331bca82c6eb31d88193e4/litellm-1.77.0-py3-none-any.whl", hash = "sha256:40c3ad4b4ef8eab109e04e71b62b9eab659d7af763d9e62d1a3a770ca25468ac", size = 9003845, upload-time = "2025-09-09T14:50:18.309Z" },
+]
+
+[[package]]
+name = "local-agents"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "fastapi", extra = ["standard"] },
+    { name = "google-adk" },
+    { name = "litellm" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "basedpyright" },
+    { name = "ruff" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "fastapi", extras = ["standard"], specifier = ">=0.116.1" },
+    { name = "google-adk", specifier = ">=1.13.0" },
+    { name = "litellm", specifier = ">=1.77.0" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "basedpyright", specifier = ">=1.31.4" },
+    { name = "ruff", specifier = ">=0.12.12" },
 ]
 
 [[package]]

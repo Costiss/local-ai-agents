@@ -2,7 +2,7 @@
 name = "local-agents"
 version = "0.1.0"
 description = "Running AI Agents Locally via Ollama and Google ADK "
-#readme = "README.md"
+readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard]>=0.116.1",
